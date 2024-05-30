@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+    margin: 0;
+}
+
+.garden {
+    position: relative;
+}
+
+.stem {
+    width: 5px;
+    height: 0;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    animation: growStem 2s forwards;
+}
+
+.flower {
+    position: absolute;
+    bottom: 100px;
+    left: -15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    animation: growFlower 2s 2s forwards;
+}
+
+.petal {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    border-radius: 50%;
+}
+
+.petal1 {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.petal2 {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.petal3 {
+    top: 100%;
+    left: 50%;
+    transform: translateY(-100%) translateX(-50%);
+}
+
+.petal4 {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.petal5 {
+    top: 25%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.center {
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+@keyframes growStem {
+    to {
+        height: 100px;
+    }
+}
+
+@keyframes growFlower {
+    to {
+        opacity: 1;
+    }
+}
